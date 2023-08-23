@@ -1,0 +1,36 @@
+{
+    "name": "cambodev/statement",
+    "description": "Record money transaction Income / Expend import transaction form bank vue and laravel framework",
+    "keywords": ["laravel with vue js api", "income", "expend", "money", "transaction", "laravel"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hongsat LEM",
+            "email": "hongsat993@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "CamboDev\\Statement\\": "src/"
+        }
+    },
+
+    "extra": {
+        "component": "package",
+        "frameworks": ["Laravel"],
+        "branch-alias": {
+            "dev-master": "v1.0.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "CamboDev\\Statement\\StatementServiceProvider"
+            ]
+        }
+    }
+}

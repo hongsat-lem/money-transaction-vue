@@ -10,4 +10,9 @@ class Categories extends Model
     use HasFactory;
 
     protected $table = 'tu_income_expense_categories';
+
+    public function entity()
+    {
+        return $this->belongsTo(Entity::class, 'entity_id', 'id');
+    }
 }

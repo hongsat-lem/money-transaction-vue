@@ -24,6 +24,8 @@ class CategoryController extends BaseController
         ]];
 
         $this->dbSelect = ['id_ref as slug','va_category_name', 'va_category_description', 'is_income', 'is_default', 'enu_income_exp', 'created_at'];
+
+        $this->listRelations = ['entity'];
     }
 
     protected function fillCreate($model, $request = null)

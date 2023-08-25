@@ -5,14 +5,14 @@ namespace CamboDev\Statement\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ChartAccount extends Model
+class Entity extends Model
 {
     use HasFactory;
 
-    protected $table = 'tu_chart_of_accounts';
+    protected $table = 'tu_entities';
 
-    public function entity()
+    public function entity_users()
     {
-        return $this->belongsTo(Entity::class, 'entity_id', 'id');
+       return $this->hasMany(EntityUsers::class, 'entity_id', 'id');
     }
 }

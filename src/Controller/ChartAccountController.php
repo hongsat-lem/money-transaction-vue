@@ -26,6 +26,8 @@ class ChartAccountController extends BaseController
         ]];
 
         $this->dbSelect = ['id_ref as slug','va_chat_account_number', 'va_chat_account_title', 'enu_trans_type_id', 'is_default', 'va_note', 'created_at'];
+
+        $this->listRelations = ['entity'];
     }
 
     protected function fillCreate($model, $request = null)

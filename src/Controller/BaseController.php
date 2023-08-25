@@ -81,7 +81,9 @@ abstract class BaseController extends Controller
 
     protected function listIt($list)
     {
-        return $list->paginate(request('perPage'));
+        $lists = $list->paginate(request('perPage'));
+
+        return view('statement::'.$this->module.'.index', compact('lists'));
     }
 
     protected function joinRelationship($list)
@@ -310,7 +312,7 @@ abstract class BaseController extends Controller
             return $compactResource;
         }
 
-        return $data;
+        return view('statement::'.$this->module.'.show', compact('data'));
     }
 
     /**

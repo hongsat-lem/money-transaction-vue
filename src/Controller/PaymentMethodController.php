@@ -11,16 +11,16 @@ class PaymentMethodController extends BaseController
 {
     public function __construct()
     {
-        $this->module = 'category';
+        $this->module = 'payment-method';
         $this->modelClass = PaymentMethod::class;
         $this->validation = true;
         $this->useUUID = true;
         $this->deleteWithClean = true;
 
         $this->validation = [[
-            'va_category_name' => 'required',
+            'va_payment_method_name' => 'required',
         ],[],[
-            'va_category_name' => trans('Category Name'),
+            'va_payment_method_name' => trans('Name'),
         ]];
 
         $this->dbSelect = ['id_ref as slug','va_payment_method_name', 'va_payment_method_description', 'is_default', 'created_at'];
